@@ -842,21 +842,21 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 }
 
 .btn-primary {
-  background: #da1212;
+  background: #002064;
   color: #fff;
-  border: 2px solid #da1212;
+  border: 2px solid #002064;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #ec1919 !important;
-  border-color: #ec1919 !important;
+  background: #1E6DB2 !important;
+  border-color: #1E6DB2 !important;
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #da1212;
-  border: 2px solid #da1212;
+  color: #002064;
+  border: 2px solid #002064;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #da1212;
+  background: #002064;
   color: #fff;
 }
 
