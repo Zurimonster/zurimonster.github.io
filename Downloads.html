@@ -62,7 +62,17 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<style>
+	::-moz-selection { /* Code for Firefox */
+	    color: white;
+	    background: blue;
+	}
 
+	::selection {
+	    color: white;
+	    background: #002064;
+	}
+	</style>
 	</head>
 	<body>
 
@@ -98,18 +108,21 @@
 					<div class="fh5co-flex-wrap">
 						<div class="fh5co-card animate-box" data-animate-effect="fadeInLeft">
 							<h5>Datasets</h5>
-							<p>The datasets. How to use. Example</p>
-							<p><a href="https://www.google.com/" class="btn btn-md btn-primary">Link</a></p>
+							<p>How to use: The three folders contain the datasets from binary classification, multi-class classification and regression tasks. The winning features explained in the MLBench paper are stored in the subfolders, which are named the same way as in the MLBench paper. Further details can be found in the ReadMe file in each folder. </p>
+							<p>Example: The "D-EG" dataset in the "Binary" folder contains the winning features of the EverGreen conpetition. The data is held in the .csv files. In each .csv file, the features are arraged in columns and training entries are arranced in columns. The "EverGreen_train.csv" contains the features and label used for training models. The "EverGreen_test.csv" cintains the features of the test cases. The "urlid.csv" contains the ids for the test cases, which are needed for the submission to Kaggle. </p>
+							<p><a href="https://www.research-collection.ethz.ch/handle/20.500.11850/277646" class="btn btn-md btn-primary">Link</a></p>
 						</div>
 						<div class="fh5co-card animate-box" data-animate-effect="fadeInLeft">
 							<h5>Azure experiments</h5>
-							<p>The JSON files. How to use. Examples.</p>
-							<p><a href="https://www.google.com/" class="btn btn-md btn-primary">Link</a></p>
+							<p>How to use: The experiments used to produce the results in the MLBench paper have been exported into JSON files with the help of the PowerShell Module for Azure Machine Learning Studio & Web Services (https://github.com/hning86/azuremlps). The name of an experiment indicates 1) the name of the dataset, 2) whether the input is winning feature or raw data, 3) whether hyperparameter tuning is enabled, and 4) the classifier/regressor used. </p>
+							<p>Example: "D-EG-r-HPT-C-LR.json" indicates that this experiment takes the raw data ("-r") from the EverGreen ("D-EG") Kaggle competition and the experiment applies hyperparemeter tuning ("HPT") in training the logistic regression model ("C-LR"). To import the experiment, you need to download and import the PowerShell tool mentioned above. By default, the experiment will read data from our Azure Blob container. You can also replace the data source with the csv files you just downloaded. </p>
+							<p><a href="https://www.research-collection.ethz.ch/handle/20.500.11850/277646" class="btn btn-md btn-primary">Link</a></p>
 						</div>
 						<div class="fh5co-card animate-box" data-animate-effect="fadeInLeft">
 							<h5>SageMaker experiments</h5>
-							<p>The Python files. How to use. Examples.</p>
-							<p><a href="https://www.google.com/" class="btn btn-md btn-primary">Link</a></p>
+							<p>How to use: There are two ways to interact with the SageMaker platform. The GUI provided by SageMaker can be used to training the model and deploy the trained model to an endpoint. The inference step is processed by the a Python script. The training and deployment can also be scripted. Thus, bypass the GUI.</p>
+							<p>Example: The inference scripts for "D-EG" need previously deployed endpoints. After deploying your endpoint, you need to update the script to insert the correct endpoint name to produce the results. The script for training and inderence for the "D-LDP1" dataset can be found in the "D-LDP1" folder. Since this method requires S3 storage, you need to configure your S3 bucket and credentials before using the script. Please note that SageMaker only takes numerical features. Therefore, preprocessing steps are needed. The preprocessing is done by the "...-prepare.py" script. </p>
+							<p><a href="https://www.research-collection.ethz.ch/handle/20.500.11850/277646" class="btn btn-md btn-primary">Link</a></p>
 						</div>
 
 					</div>	

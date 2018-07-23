@@ -62,7 +62,17 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<style>
+	::-moz-selection { /* Code for Firefox */
+	    color: white;
+	    background: blue;
+	}
 
+	::selection {
+	    color: white;
+	    background: #002064;
+	}
+	</style>
 	</head>
 	<body>
 
@@ -70,7 +80,7 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
-			<h1 id="fh5co-logo"><a href="index.html"><img src="../images/logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
+			<h1 id="fh5co-logo"><a href="../index.html"><img src="../images/logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
 					<li><a href="../index.html">Overview</a></li>
@@ -97,23 +107,55 @@
 						</figure>
 					</div> -->
 					
-					<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeInLeft">
+					<!-- <div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeInLeft"> -->
 						
 						<div class="col-md-9 col-md-push-3">
 							<h1>Description</h1>
-							<p>The readme</p>
+							<p>StumbleUpon Evergreen Classification Challenge (D-EG): In this competition, URLs and their corresponding raw contents are given. The goal of this competition isto build a classifier that can label a URL (i.e., Web page) as either “ephemeral” (i.e., pagesthat are only relevant for a short period of time, such as news articles) or “evergreen” (i.e.,pages that maintain a timeless quality, such as Wikipedia articles). We use the winningcode from Marco Lui. It extracts features from raw HTML documents and uses onlytext-based features.  The most important step is a stacking-based approach that combinesthe generated features. The algorithm the winning code uses is logistic regression.Features used by this winning code are stored by extracting the input to the logistic regres-sion classifier. We abbreviate this constructed dataset as D-EG. </p>
 
-							<p>How to use</p>
+							<p>The column name of the Label is: Label
+
+							The features are stored in the file: EverGreen_train.csv EverGreen_test.csv
+
+							The urlid is store in the file: urlid.csv</p>
+
+							<p>Azure experiments are available for download. </p>
+							<p>Scripts for inferece on SageMaker are available for download. </p>
 						</div>
 
 						<div class="col-md-3 col-md-pull-9 fh5co-services">
 							<h3>Statistics</h3>
-							<ul>
-								<li>Web Design Web Design Web Design Web Design</li>
-								<li>e-Commerce</li>
-								<li>Logo &amp; Branding</li>
-								<li>Packaging</li>
-							</ul>
+							<style type="text/css">
+								.tg  {border-collapse:collapse;border-spacing:0;}
+								.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 19px;border-style:none;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+								.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 19px;border-style:none;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+								.tg .tg-0ord{text-align:right}
+								.tg .tg-lqy6{text-align:right;vertical-align:top}
+								.tg .tg-yw4l{vertical-align:top}
+
+								</style>
+								<table class="tg">
+								  <tr>
+								    <th class="tg-031e">Training set</th>
+								    <th class="tg-0ord">7,395</th>
+								  </tr>
+								  <tr>
+								    <td class="tg-031e">Test set</td>
+								    <td class="tg-0ord">3,171</td>
+								  </tr>
+								  <tr>
+								    <td class="tg-031e"># Features</td>
+								    <td class="tg-0ord">29</td>
+								  </tr>
+								  <tr>
+								    <td class="tg-yw4l">Training size</td>
+								    <td class="tg-lqy6">2.59MB</td>
+								  </tr>
+								  <tr>
+								    <td class="tg-yw4l">Test size</td>
+								    <td class="tg-lqy6">1.35MB</td>
+								  </tr>
+								</table>
 						</div>
 
 					</div>

@@ -62,7 +62,17 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<style>
+	::-moz-selection { /* Code for Firefox */
+	    color: white;
+	    background: blue;
+	}
 
+	::selection {
+	    color: white;
+	    background: #002064;
+	}
+	</style>
 	</head>
 	<body>
 
@@ -70,7 +80,7 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
-			<h1 id="fh5co-logo"><a href="index.html"><img src="../images/logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
+			<h1 id="fh5co-logo"><a href="../index.html"><img src="../images/logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
 					<li><a href="../index.html">Overview</a></li>
@@ -97,22 +107,64 @@
 						</figure>
 					</div> -->
 					
-					<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeInLeft">
+					<!-- <div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeInLeft"> -->
 						
 						<div class="col-md-9 col-md-push-3">
 							<h1>Description</h1>
-							<p>The readme</p>
+							<p>How  Much  Did  It  Rain?   (D-HMR):  The  goal  of  this  competition  is  toproduce a probabilistic distribution of the hourly rain gauge total.  Competitors are givenpolarimetric radar values and derived quantities at a location over the period of one hour ofyear 2013 and they need to predict the values of year 2014. There are 1,126,694 recordsof  one  hour  in  the  training  set,  and  for  each  record  there  could  be  one  or  more  radarscans in that hour. The winning code from Devin uses multi-class classification with probability score to estimate the rain amount.  We use the features extracted by that codeto assemble D-HMR.</p>
 
-							<p>How to use</p>
+							<p>The author seperated the data into 5 part based on number of radar scans.
+
+							The 5 sub-datasets have 3,5,5,6,12 classes respectively.
+
+							To generate final result, classify D-HMR-test-{1-5}.csv and save the result to D-HMR-result-{1-5}.csv and run submission.py
+
+							The column name of the Label is: d_lab
+
+							The features are contained in: D-HMR-train-{1-5}.csv D-HMR-test-{1-5}.csv
+
+							The id of the test data is contained in: D-HMR-testId-{1-5}.csv</p>
+
+							<p>Azure experiments are available for download. </p>
+							<p>Scripts for inferece on SageMaker are available for download. </p>
+
+							
 						</div>
 
 						<div class="col-md-3 col-md-pull-9 fh5co-services">
 							<h3>Statistics</h3>
 							<ul>
-								<li>Web Design Web Design Web Design Web Design</li>
-								<li>e-Commerce</li>
-								<li>Logo &amp; Branding</li>
-								<li>Packaging</li>
+								<style type="text/css">
+								.tg  {border-collapse:collapse;border-spacing:0;}
+								.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 19px;border-style:none;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+								.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 19px;border-style:none;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+								.tg .tg-0ord{text-align:right}
+								.tg .tg-lqy6{text-align:right;vertical-align:top}
+								.tg .tg-yw4l{vertical-align:top}
+
+								</style>
+								<table class="tg">
+								  <tr>
+								    <th class="tg-031e">Training set</th>
+								    <th class="tg-0ord">1,126,694</th>
+								  </tr>
+								  <tr>
+								    <td class="tg-031e">Test set</td>
+								    <td class="tg-0ord">630,452</td>
+								  </tr>
+								  <tr>
+								    <td class="tg-031e"># Features</td>
+								    <td class="tg-0ord">432</td>
+								  </tr>
+								  <tr>
+								    <td class="tg-yw4l">Training size</td>
+								    <td class="tg-lqy6">2.13GB</td>
+								  </tr>
+								  <tr>
+								    <td class="tg-yw4l">Test size</td>
+								    <td class="tg-lqy6">1.19GB</td>
+								  </tr>
+								</table>
 							</ul>
 						</div>
 

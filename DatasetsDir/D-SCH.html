@@ -62,7 +62,17 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<style>
+	::-moz-selection { /* Code for Firefox */
+	    color: white;
+	    background: blue;
+	}
 
+	::selection {
+	    color: white;
+	    background: #002064;
+	}
+	</style>
 	</head>
 	<body>
 
@@ -70,7 +80,7 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
-			<h1 id="fh5co-logo"><a href="index.html"><img src="../images/logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
+			<h1 id="fh5co-logo"><a href="../index.html"><img src="../images/logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
 					<li><a href="../index.html">Overview</a></li>
@@ -97,22 +107,55 @@
 						</figure>
 					</div> -->
 					
-					<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeInLeft">
+					<!-- <div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeInLeft"> -->
 						
 						<div class="col-md-9 col-md-push-3">
 							<h1>Description</h1>
-							<p>The readme</p>
+							<p>MLSP2014-Schizophrenia Classification Challenge (D-SCH): In this competition, multimodal features derived from brain magnetic resonance imaging (MRI) scansand labels of the training data are provided.  The goal of this competition is to build machine learning models that can predict if a person is a “healthy control” or “schizophrenic patient” in the testing data.5We use the winning code from Karolis Koncevicius. Interestingly, the winning code uses the same features as the raw data provided by Kag-gle. The algorithm it uses is distance weighted discrimination. We abbreviate the constructed dataset as D-SCH.</p>
 
-							<p>How to use</p>
+							<p>The column name of the Label is: Class
+
+							The features are stored in the file: Schizophrenia_train.csv Schizophrenia_test.csv
+
+							The id of test data is stored in the file: test_id.csv</p>
+							<p>Azure experiments are available for download. </p>
+							<p>Scripts for inferece on SageMaker are available for download. </p>
 						</div>
 
 						<div class="col-md-3 col-md-pull-9 fh5co-services">
 							<h3>Statistics</h3>
 							<ul>
-								<li>Web Design Web Design Web Design Web Design</li>
-								<li>e-Commerce</li>
-								<li>Logo &amp; Branding</li>
-								<li>Packaging</li>
+								<style type="text/css">
+								.tg  {border-collapse:collapse;border-spacing:0;}
+								.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 19px;border-style:none;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+								.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 19px;border-style:none;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+								.tg .tg-0ord{text-align:right}
+								.tg .tg-lqy6{text-align:right;vertical-align:top}
+								.tg .tg-yw4l{vertical-align:top}
+
+								</style>
+								<table class="tg">
+								  <tr>
+								    <th class="tg-031e">Training set</th>
+								    <th class="tg-0ord">86</th>
+								  </tr>
+								  <tr>
+								    <td class="tg-031e">Test set</td>
+								    <td class="tg-0ord">119,748</td>
+								  </tr>
+								  <tr>
+								    <td class="tg-031e"># Features</td>
+								    <td class="tg-0ord">410</td>
+								  </tr>
+								  <tr>
+								    <td class="tg-yw4l">Training size</td>
+								    <td class="tg-lqy6">0.3MB</td>
+								  </tr>
+								  <tr>
+								    <td class="tg-yw4l">Test size</td>
+								    <td class="tg-lqy6">488MB</td>
+								  </tr>
+								</table>
 							</ul>
 						</div>
 
